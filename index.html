@@ -7,17 +7,17 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: grey; /* Fondo morado oscuro */
+            background-color: #4B0082; /* Fondo morado oscuro */
             color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Alineado desde el inicio */
+            align-items: flex-start;
             height: 100vh;
         }
         .container {
-            background-color: #4B0082;
+            background-color: #ffffff;
             color: #333;
             padding: 20px;
             border-radius: 10px;
@@ -36,15 +36,15 @@
         }
         h2 {
             text-align: center;
-            color: #ffd800; /* Título en morado oscuro */
+            color: #4B0082; /* Título en morado oscuro */
         }
         h3 {
-            color: #ff7800; /* Subtítulos en morado oscuro */
+            color: #4B0082; /* Subtítulos en morado oscuro */
             margin-bottom: 10px;
         }
         label {
             font-weight: bold;
-            color: #fff; /* Color del texto de las etiquetas */
+            color: #4B0082; /* Color del texto de las etiquetas */
         }
         input[type="text"], input[type="number"], input[type="date"], input[type="time"] {
             width: 100%;
@@ -62,7 +62,7 @@
         button {
             width: 100%;
             padding: 12px;
-            background-color: #ff8a00;
+            background-color: #4B0082;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -71,7 +71,7 @@
             transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #ffcc00;
+            background-color: #37176A;
         }
         .hidden {
             display: none;
@@ -262,7 +262,9 @@
             const restante = (precioTotal - adelanto).toFixed(2);
 
             let mensaje = `Ya está lista tu cotización, ${nombre}:\n\n`;
-            mensaje += `Lugar del evento: ${lugar}\n`;
+            mensaje += `📅 Fecha del evento: ${fecha}\n`;
+            mensaje += `⏰ Hora del evento: ${hora}\n`;
+            mensaje += `📍 Lugar del evento: ${lugar}\n`;
             mensaje += `Servicios solicitados:\n`;
 
             if (document.getElementById('mozos').checked) {
